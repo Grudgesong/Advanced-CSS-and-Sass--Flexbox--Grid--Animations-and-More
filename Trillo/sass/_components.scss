@@ -1,30 +1,43 @@
-.container {
-  max-width: 120rem;
-  margin: 8rem auto;
-  background-color: var(--color-grey-light-2);
-  box-shadow: var(--shadow-dark);
-
-  min-height: 50rem;
+// LOGO
+.logo {
+  height: 3.25rem;
 }
 
-.header {
-  height: 7rem;
-  background-color: var(--color-white);
-  border-bottom: var(--color-grey-light-2);
+//SEARCH BOX
+.search {
+  &__input {
+  }
+
+  &__button {
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+  }
 }
 
-.content {
-  display: flex;
-}
+//USER NAVIGATION
+.user-nav {
+  &__icon-box {
+  }
 
-.sidebar {
-  background-color: var(--color-grey-dark-1);
-  // flex: grow shrink wdth
-  flex: 0 0 18%;
-}
+  &__icon {
+    height: 2.25rem;
+    width: 2.25rem;
+  }
 
-.hotel-view {
-  background-color: var(--color-white);
+  &__notification {
+  }
 
-  flex: 1;
+  &__user {
+  }
+
+  &__user-photo {
+    height: 3.75rem;
+    border-radius: 50%;
+  }
+
+  &__user-name {
+  }
 }
