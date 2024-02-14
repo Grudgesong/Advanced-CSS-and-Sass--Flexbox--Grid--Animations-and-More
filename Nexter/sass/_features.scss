@@ -3,11 +3,13 @@
 
   margin: 15rem 0;
 
-  display: grid;
-  // grid-template-columns: repeat(3, 1fr);
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  gap: 6rem;
-  align-items: start;
+  @supports (display: grid) {
+    display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 6rem;
+    align-items: start;
+  }
 }
 
 .feature {
@@ -15,6 +17,15 @@
   grid-template-columns: min-content 1fr;
   row-gap: 1.5rem;
   column-gap: 2.5rem;
+
+  // Uses this if grid is not supported
+  float: left;
+  width: 33.3333%;
+  margin-bottom: 6rem;
+  @supports (display: grid) {
+    width: auto;
+    margin-bottom: 0;
+  }
 
   &__icon {
     fill: $color-primary;
